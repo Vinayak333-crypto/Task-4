@@ -1,0 +1,14 @@
+---Sum of Quantity, sum of totalamount, avg of quantity, avg of total amount for each distinct product
+---Group by product ID
+
+
+select * from dbo.Sales
+
+ProductID,
+sum(Quantity) as [Total Quantity],
+sum(TotalAmount) as [Sum of Amount],
+avg(Quantity) [Average Quantity Sold],
+avg(TotalAmount) [Average Amount]
+from dbo.Sales
+group by ProductID
+

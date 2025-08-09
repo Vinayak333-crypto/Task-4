@@ -1,0 +1,15 @@
+---Sum of Quantity, sum of amount, avg of quantity & avg of amount for distinct combinations of ProductID & storeid
+---Group by store ID
+
+
+select * from dbo.Sales
+
+select
+productid,
+storeid,
+sum(Quantity) [Total Quantity],
+sum(totalamount) [Sum of Amount],
+avg(quantity) [Avg of Quantity],
+avg(totalamount) [Avg of Amount]
+from dbo.sales
+group by ,StoreID
